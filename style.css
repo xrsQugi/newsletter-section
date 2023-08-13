@@ -1,0 +1,44 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+p,
+h1,
+h2,
+h3 {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+ol {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.newsletter{
+    padding: 100px 0;
+    margin: 0 auto;
+    background: var(--white, #FFF);
+}
+
+.container {
+    min-width: 290px;
+    margin: 0 auto;
+    padding: 0 16px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 536px);
+    justify-content: center;
+}
+
+.text-input-box{
+    max-width: 536px;
+}
