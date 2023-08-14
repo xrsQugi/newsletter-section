@@ -1,3 +1,4 @@
+/* ----- reset styles ----- */
 h1,
 h2,
 h3,
@@ -25,10 +26,11 @@ html, body{
     scroll-behavior: smooth;
 }
 
+/* ----- parent and container ----- */
 .newsletter {
   padding: 100px 0;
   margin: 0 auto;
-  background: var(--white, #fff);
+  background-color: var(--white, #fff);
 }
 
 .container {
@@ -36,11 +38,12 @@ html, body{
   margin: 0 auto;
   padding: 0 16px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, 536px);
+  grid-template-columns: repeat(auto-fit, 343px);
   justify-content: center;
-  gap: 100px;
+  gap: 30px;
 }
 
+/* ---- text box ---- */
 .text-input-box {
   max-width: 536px;
   display: flex;
@@ -65,6 +68,7 @@ html, body{
   margin-top: 31px;
 }
 
+/* ---- form box ---- */
 .form-box{
   margin-top: 20px;
   display: flex;
@@ -72,6 +76,7 @@ html, body{
   gap: 20px;
 }
 
+/* --- input --- */
 .form-box .form-input{
   padding: 11px 20px;
   outline: 0;
@@ -83,7 +88,6 @@ html, body{
   font-weight: 400;
   line-height: 27px;
 }
-
 .form-box .form-input::placeholder{
   color: var(--grey, #D9D9D9);
   font-family: Roboto;
@@ -92,23 +96,63 @@ html, body{
   font-weight: 400;
   line-height: 27px;
 }
-
 .form-box .form-input:focus{
   border: 1px solid var(--blue-font, #0A224A);
 }
 
-.checkbox text{
+/* --- checkbox --- */
+.checkbox-box{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+}
+.checkbox-box .checkbox{
+  display: none;
+}
+.checkbox-box .fake{
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  border: 1px #B6B6B6 solid;
+  background-color: transparent;
+  position: relative;
+  transition: .2s;
+}
+.checkbox-box .fake::before{
+  content: "";
+  position: absolute;
+  display: block;
+  width: 13px;
+  height: 13px;
+  background-image: url("./checked-icon.svg");
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: .2s;
+}
+.checkbox-box .checkbox:checked + .fake::before{
+  opacity: 1;
+}
+.checkbox-box .checkbox:checked + .fake{
+  background-color: #0A224A;
+  border: 1px #0A224A solid;
+}
+.checkbox-box .text{
   color: #7A7A7A;
   font-family: Roboto;
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
   line-height: 27px;
+  margin: 0;
 }
 
+/* --- button send --- */
 .btn-send{
   border: 0;
-  background: var(--blue-font, #0A224A);
+  background-color: var(--blue-font, #0A224A);
   padding: 17px 65px;
   color: var(--white, #FFF);
   font-family: Roboto;
@@ -117,4 +161,20 @@ html, body{
   font-weight: 400;
   line-height: 24px;
   width: 224px;
+  cursor: pointer;
+  transition: all .25s ease-in-out;
+}
+.btn-send:hover{
+  background-color: #061835;
+}
+
+/* ---- image box ---- */
+.image-box{
+  width: 343px;
+  height: 300px;
+}
+
+.image-box img{
+  width: 100%;
+  height: 100%;
 }
