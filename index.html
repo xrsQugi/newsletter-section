@@ -22,11 +22,31 @@
           <p class="text">
             Every week we will send you new designs and information about sales.
           </p>
-          <form class="form-box">
-            <input type="text" class="form-input" placeholder="Name" />
-            <input type="email" class="form-input" placeholder="E-mail" />
+          <form class="form-box" id="form">
+            <div class="form-input-box">
+              <input
+                type="text"
+                id="name"
+                class="form-input"
+                placeholder="Name"
+              />
+              <svg class="error-icon error-icon-name">
+                <use href="./symbol-defs.svg#icon-error"></use>
+              </svg>
+            </div>
+            <div class="form-input-box">
+              <input
+                type="text"
+                id="email"
+                class="form-input"
+                placeholder="E-mail"
+              />
+              <svg class="error-icon error-icon-email">
+                <use href="./symbol-defs.svg#icon-error"></use>
+              </svg>
+            </div>
             <label class="checkbox-box">
-              <input type="checkbox" class="checkbox" />
+              <input type="checkbox" class="checkbox" id="formAgreement" />
               <span class="fake"></span>
               <span class="text">Agree to subscribe to the newsletter</span>
             </label>
@@ -38,5 +58,6 @@
         </div>
       </div>
     </section>
+    <script src="./js/index.js"></script>
   </body>
 </html>
