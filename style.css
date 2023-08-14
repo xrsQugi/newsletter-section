@@ -1,44 +1,120 @@
-*,
-::before,
-::after {
-  box-sizing: border-box;
-}
-
-p,
 h1,
 h2,
-h3 {
+h3,
+h4,
+h5,
+h6,
+p {
   margin: 0;
   padding: 0;
 }
 
-ul,
-ol {
-  margin-top: 0;
-  margin-bottom: 0;
+a{
+    text-decoration: none;
+}
+
+ul {
+  list-style: none;
   padding-left: 0;
-  list-style-type: none;
+  margin: 0;
 }
 
-a {
-  text-decoration: none;
+html, body{
+    margin: 0;
+    height: 100%;
+    scroll-behavior: smooth;
 }
 
-.newsletter{
-    padding: 100px 0;
-    margin: 0 auto;
-    background: var(--white, #FFF);
+.newsletter {
+  padding: 100px 0;
+  margin: 0 auto;
+  background: var(--white, #fff);
 }
 
 .container {
-    min-width: 290px;
-    margin: 0 auto;
-    padding: 0 16px;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, 536px);
-    justify-content: center;
+  min-width: 290px;
+  margin: 0 auto;
+  padding: 0 16px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 536px);
+  justify-content: center;
+  gap: 100px;
 }
 
-.text-input-box{
-    max-width: 536px;
+.text-input-box {
+  max-width: 536px;
+  display: flex;
+  flex-direction: column;
+}
+.text-input-box .title {
+  color: var(--blue-font, #0a224a);
+  font-family: Roboto;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 45px;
+  text-transform: uppercase;
+}
+.text-input-box .text {
+  color: var(--blue-font, #0A224A);
+  font-family: Roboto;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 27px;
+  margin-top: 31px;
+}
+
+.form-box{
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-box .form-input{
+  padding: 11px 20px;
+  outline: 0;
+  border: 1px solid var(--dark-grey, #B6B6B6);
+  color: var(--blue-font, #0A224A);
+  font-family: Roboto;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 27px;
+}
+
+.form-box .form-input::placeholder{
+  color: var(--grey, #D9D9D9);
+  font-family: Roboto;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 27px;
+}
+
+.form-box .form-input:focus{
+  border: 1px solid var(--blue-font, #0A224A);
+}
+
+.checkbox text{
+  color: #7A7A7A;
+  font-family: Roboto;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 27px;
+}
+
+.btn-send{
+  border: 0;
+  background: var(--blue-font, #0A224A);
+  padding: 17px 65px;
+  color: var(--white, #FFF);
+  font-family: Roboto;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  width: 224px;
 }
